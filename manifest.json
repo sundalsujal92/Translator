@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Language Translator Extension",
+    "version": "1.0",
+    "description": "Translate text within your Chrome browser.",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "contextMenus"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "width": 300, 
+      "height": 400 
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["languages.js"]
+      }
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    }
+ 
+  }
+  
